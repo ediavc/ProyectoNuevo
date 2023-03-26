@@ -2,7 +2,7 @@
     padding: 40px;
 }
 div{
-    background-color: azure;
+    background-color: rgb(223, 161, 161);
     text-align: center;
 
 }
@@ -14,7 +14,7 @@ div{
         border: radius 100%;
         box-shadow: 3px 3px 3px rgb(30, 31, 32);
         left: 3%;
-        top: 750px;
+        top: 650px;
     }
 }
 @media (max-width: 575px){
@@ -24,7 +24,7 @@ div{
         border: radius 100%;
         box-shadow: 3px 3px 3px rgb(30, 31, 32);
         left: 35%;
-        top: 900px;
+        top: 800px;
     }
 }
 

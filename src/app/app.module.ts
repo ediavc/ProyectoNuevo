@@ -12,7 +12,11 @@ import { Cir1Component } from './components/cir1/cir1.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FinComponent } from './components/fin/fin.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component'
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,13 +29,20 @@ import { FinComponent } from './components/fin/fin.component';
     EducacionComponent,
     Cir1Component,
     ProyectosComponent,
-    FinComponent
+    FinComponent,
+    HomeComponent,
+    LoginComponent
     
   ],
   imports: [
     BrowserModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
