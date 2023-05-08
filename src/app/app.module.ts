@@ -8,7 +8,6 @@ import { FondoComponent } from './components/fondo/fondo.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { Cir1Component } from './components/cir1/cir1.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FinComponent } from './components/fin/fin.component';
@@ -17,6 +16,19 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor-service';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditeducacionComponent } from './components/educacion/editeducacion.component';
+import { NeweducacionComponent } from './components/educacion/neweducacion.component';
+import { HysComponent } from './components/hys/hys.component';
+import { EditSkillComponent } from './components/hys/edit-skill.component';
+import { NewSkillComponent } from './components/hys/new-skill.component';
+import { EditIntroComponent } from './components/intro/edit-intro.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+
 
 @NgModule({
   declarations: [
@@ -27,12 +39,18 @@ import { FormsModule } from '@angular/forms';
     IntroComponent,
     ExperienciaComponent,
     EducacionComponent,
-    Cir1Component,
     ProyectosComponent,
     FinComponent,
     HomeComponent,
-    LoginComponent
-    
+    LoginComponent,
+    EditExperienciaComponent,
+    NewExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    HysComponent,
+    EditSkillComponent,
+    NewSkillComponent,
+    EditIntroComponent
   ],
   imports: [
     BrowserModule,
@@ -40,10 +58,13 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    
 
   ],
   
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
