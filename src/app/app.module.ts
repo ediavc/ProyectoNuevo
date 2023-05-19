@@ -58,13 +58,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-<<<<<<< HEAD
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
-=======
-    
-
->>>>>>> 8c5250475ff63b0b0abe4b3394a39af06c0bc6e4
   ],
   
   providers: [

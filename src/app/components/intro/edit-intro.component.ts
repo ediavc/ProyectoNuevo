@@ -30,10 +30,7 @@ export class EditIntroComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-<<<<<<< HEAD
     this.persona.img = this.imageService.URL
-=======
->>>>>>> 8c5250475ff63b0b0abe4b3394a39af06c0bc6e4
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);
